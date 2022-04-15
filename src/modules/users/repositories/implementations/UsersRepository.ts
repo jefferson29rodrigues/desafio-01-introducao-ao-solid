@@ -34,7 +34,7 @@ class UsersRepository implements IUsersRepository {
   }
 
   findById(id: string): User | undefined {
-    const user = this.users.find(() => user.id === id);
+    const user = this.users.find((user) => user.id === id);
 
     return user;
   }
@@ -46,7 +46,13 @@ class UsersRepository implements IUsersRepository {
   }
 
   turnAdmin(receivedUser: User): User {
-    // Complete aqui
+    const user = receivedUser;
+
+    Object.assign(user, {
+      admin: true
+    })
+
+    return user;
   }
 
   list(): User[] {
