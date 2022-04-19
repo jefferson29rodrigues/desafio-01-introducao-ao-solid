@@ -30,7 +30,7 @@ class UsersRepository implements IUsersRepository {
 
     this.users.push(user);
     
-    return user;
+    return this.users[this.users.length - 1];
   }
 
   findById(id: string): User | undefined {
