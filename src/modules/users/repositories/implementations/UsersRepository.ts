@@ -50,7 +50,7 @@ class UsersRepository implements IUsersRepository {
 
     Object.assign(user, {
       admin: true
-    })
+    });
 
     return user;
   }
