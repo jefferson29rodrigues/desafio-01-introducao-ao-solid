@@ -49,7 +49,8 @@ class UsersRepository implements IUsersRepository {
     const user = receivedUser;
 
     Object.assign(user, {
-      admin: true
+      admin: true,
+      updated_at: new Date()
     });
 
     return user;
